@@ -1,22 +1,34 @@
-function onlyEven (array) {
-  // your code here
-};
+function onlyEven(array) {
+  const newArr = array.filter(function (num) {
+    return num % 2 === 0;
+  });
+  return newArr;
+}
 
-function onlyOneWord (array) {
-  // your code here
-};
+function onlyOneWord(array) {
+  const newArr = array.filter(function (str) {
+    return str;
+  });
 
-function positiveRowsOnly (array) {
-  // your code here
-};
+  return newArr;
+}
 
-function allSameVowels (array) {
+function positiveRowsOnly(array) {
+  const newArr = array.filter(function (el) {
+    return el.every(function (x) {
+      return x >= 0;
+    });
+  });
+  return newArr;
+}
+
+function allSameVowels(array) {
   // your code here
-};
+}
 
 module.exports = {
   onlyEven: onlyEven,
   onlyOneWord: onlyOneWord,
   positiveRowsOnly: positiveRowsOnly,
-  allSameVowels: allSameVowels
+  allSameVowels: allSameVowels,
 };
